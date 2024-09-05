@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import NextLink from 'next/link'
+
+import NextLink from '@/components/common/NextLink'
 
 const ContactPage: React.FC = () => (
     <>

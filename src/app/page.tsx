@@ -1,32 +1,28 @@
 import Image from 'next/image'
-import NextLink from 'next/link'
 
+import FeaturedGfx from '@/components/common/FeaturedGfx'
+import NextLink from '@/components/common/NextLink'
 import {cn} from '@/lib/shadcn'
 
-interface ImageHoverTextProps {
+interface HoverTextProps {
     className?: string
-    src: string
-    alt: string
     href: string
     text: string
+    children?: React.ReactNode
 }
 
-const ImageHoverText: React.FC<ImageHoverTextProps> = ({
+const HoverText: React.FC<HoverTextProps> = ({
     className,
-    src,
-    alt,
     href,
     text,
+    children,
 }) => (
     <NextLink
         href={href}
-        className={cn('relative flex-1 overflow-clip group', className)}>
-        <Image
-            src={src}
-            alt={alt}
-            fill
-            className='object-cover transition-all duration-700 group-hover:scale-[1.05]'
-        />
+        className={cn('relative flex flex-1 overflow-clip group', className)}>
+        <div className='absolute inset-0 flex transition-all duration-700 group-hover:scale-[1.05]'>
+            {children}
+        </div>
 
         {/* hover background blur/darken */}
         <div
@@ -59,27 +55,29 @@ text-xl text-white tracking-widest
 
 const HomePage: React.FC = () => (
     <>
-        <ImageHoverText
-            src='/hero.png'
-            alt='hero'
-            href='/contact'
-            text='SOCIALS'
-        />
+        <HoverText href='/contact' text='SOCIALS'>
+            <Image src='/hero.png' alt='hero' fill className='object-cover' />
+        </HoverText>
 
-        <ImageHoverText
-            src='/featured-release.png'
-            alt='featured release'
-            href='/music'
-            text='FEATURED RELEASE'
-        />
+        <HoverText href='/music' text='FEATURED RELEASE'>
+            <Image
+                src='/featured-release.png'
+                alt='featured release'
+                fill
+                className='object-cover'
+            />
+        </HoverText>
 
-        <ImageHoverText
-            className='flex-[0.75]'
-            src='/gfx-slot.png'
-            alt='gfx'
-            href='/gfx'
-            text='GFX'
-        />
+        <HoverText className='flex-[0.75]' href='/gfx' text='GFX'>
+            <FeaturedGfx />
+
+            {/* <Image
+                src='/gfx-slot.png'
+                alt='gfx'
+                fill
+                className='object-cover'
+            /> */}
+        </HoverText>
     </>
 )
 

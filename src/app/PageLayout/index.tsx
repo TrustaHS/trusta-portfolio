@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import NextLink from 'next/link'
 
 import config from '@/common/config'
+import NextLink from '@/components/common/NextLink'
 
 interface PageLayoutProps {
     children?: React.ReactNode
