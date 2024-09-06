@@ -32,7 +32,7 @@ const GfxPage: React.FC = () => (
                 {config.gfx.logos.map(({src, alt}, index) => (
                     <Image
                         key={index}
-                        src={`${config.imageUrls.gfx.logos}${src}`}
+                        src={src}
                         alt={alt}
                         width={config.gfx.logoImageSize}
                         height={config.gfx.logoImageSize}

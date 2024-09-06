@@ -16,16 +16,17 @@ const FeaturedGfx: React.FC<FeaturedGfxProps> = ({className}) => (
         {config.gfx.featured.left.map(({src, alt}, index) => (
             <Image
                 key={index}
-                src={`${config.imageUrls.gfx.featured}${src}`}
+                src={src}
                 alt={alt}
                 width={config.gfx.featuredGfxImageSize}
                 height={config.gfx.featuredGfxImageSize}
+                className='rounded-md'
             />
         ))}
 
         <Image
-            src='/gfx/trusta-gfx-logo.png'
-            alt='trusta gfx logo'
+            src={config.gfx.gfxLogoSrc}
+            alt={config.gfx.gfxLogoAlt}
             width={config.gfx.featuredGfxImageSize}
             height={0}
         />
@@ -33,10 +34,11 @@ const FeaturedGfx: React.FC<FeaturedGfxProps> = ({className}) => (
         {config.gfx.featured.right.map(({src, alt}, index) => (
             <Image
                 key={index}
-                src={`${config.imageUrls.gfx.featured}${src}`}
+                src={src}
                 alt={alt}
                 width={config.gfx.featuredGfxImageSize}
                 height={config.gfx.featuredGfxImageSize}
+                className='rounded-md'
             />
         ))}
     </div>

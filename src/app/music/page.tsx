@@ -63,7 +63,7 @@ const HoverImage: React.FC<HoverImageProps> = ({
 const MusicPage: React.FC = () => (
     <>
         <HoverImage
-            src={`${config.imageUrls.music}${config.music.latest.src}`}
+            src={config.music.latest.src}
             alt={config.music.latest.alt}
             href={config.music.latest.href}
             imageSize={config.music.latestImageSize}
@@ -95,7 +95,7 @@ translate-x-[calc(100%+2.5rem+0.5rem)]
             {config.music.featured.map(({src, alt, href}, index) => (
                 <HoverImage
                     key={index}
-                    src={`${config.imageUrls.music}${src}`}
+                    src={src}
                     alt={alt}
                     href={href}
                     imageSize={config.music.featuredImageSize}

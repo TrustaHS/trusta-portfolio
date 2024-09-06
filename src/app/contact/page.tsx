@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+import config from '@/common/config'
 import NextLink from '@/components/common/NextLink'
 
 const ContactPage: React.FC = () => (
@@ -23,8 +24,8 @@ const ContactPage: React.FC = () => (
             <div className='flex justify-between max-w-screen-md w-full'>
                 <div className='relative flex flex-col items-center gap-4'>
                     <Image
-                        src='/contact/discord.png'
-                        alt='discord logo'
+                        src={config.contact.discord.src}
+                        alt={config.contact.discord.alt}
                         width={80}
                         height={0}
                     />
@@ -35,21 +36,28 @@ const ContactPage: React.FC = () => (
                 </div>
 
                 <div className='flex flex-col items-center gap-4'>
-                    <Image
-                        src='/contact/instagram.png'
-                        alt='instagram logo'
-                        width={80}
-                        height={0}
-                    />
+                    <a
+                        href={config.contact.instagram.href}
+                        target='_blank'
+                        rel='noopener noreferrer'>
+                        <Image
+                            src={config.contact.instagram.src}
+                            alt={config.contact.instagram.alt}
+                            width={80}
+                            height={0}
+                        />
+                    </a>
                 </div>
 
                 <div className='flex flex-col items-center gap-4'>
-                    <Image
-                        src='/contact/gmail.png'
-                        alt='gmail logo'
-                        width={80}
-                        height={0}
-                    />
+                    <a href={`mailto:${config.contact.gmail.email}`}>
+                        <Image
+                            src={config.contact.gmail.src}
+                            alt={config.contact.gmail.alt}
+                            width={80}
+                            height={0}
+                        />
+                    </a>
                 </div>
             </div>
 
@@ -79,12 +87,17 @@ const ContactPage: React.FC = () => (
                 </div>
             </div>
 
-            <Image
-                src='/contact/tcr-logo.png'
-                alt='core records logo'
-                width={200}
-                height={0}
-            />
+            <a
+                href={config.contact.tcr.href}
+                target='_blank'
+                rel='noopener noreferrer'>
+                <Image
+                    src={config.contact.tcr.src}
+                    alt={config.contact.tcr.alt}
+                    width={200}
+                    height={0}
+                />
+            </a>
         </div>
     </>
 )

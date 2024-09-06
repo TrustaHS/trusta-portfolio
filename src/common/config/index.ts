@@ -6,15 +6,6 @@ export default {
         {href: '/contact', text: 'CONTACT'},
     ],
 
-    imageUrls: {
-        music: '/music',
-
-        gfx: {
-            featured: '/gfx/featured',
-            logos: '/gfx/logos',
-        },
-    },
-
     home: {
         socials: {
             text: 'SOCIALS',
@@ -35,39 +26,12 @@ export default {
         gfx: {text: 'GFX', href: '/gfx', external: false},
     },
 
-    gfx: {
-        featuredGfxImageSize: 175,
-        logoImageSize: 200,
-
-        featured: {
-            left: [
-                {src: '/c_again.png', alt: 'come again'},
-                {src: '/render3.png', alt: 'judgement day'},
-                {src: '/givitup.png', alt: 'give it up'},
-            ],
-
-            right: [
-                {src: '/DUOJAG.png', alt: 'you and i'},
-                {src: '/LUCID.png', alt: 'lucid dreamers'},
-                {src: '/habbit.png', alt: 'our secret habit'},
-            ],
-        },
-
-        logos: [
-            {src: '/LOGO1.png', alt: 'sample logo 1'},
-            {src: '/LOGO2.png', alt: 'sample logo 2'},
-            {src: '/LOGO3.png', alt: 'sample logo 3'},
-            {src: '/LOGO4.png', alt: 'sample logo 4'},
-            {src: '/LOGO5.png', alt: 'sample logo 5'},
-        ],
-    },
-
     music: {
         latestImageSize: 350,
         featuredImageSize: 250,
 
         latest: {
-            src: '/TOP WIDE.png',
+            src: '/music/TOP WIDE.png',
             alt: 'horror of the deep',
             href: 'https://open.spotify.com/album/4z3LZf32sBSP6wSqIZEk8K?si=LWhEnaBUSBGrBzXfaKWiNA',
             artist: 'TRUSTA',
@@ -76,25 +40,55 @@ export default {
 
         featured: [
             {
-                src: '/BOT1.png',
+                src: '/music/BOT1.png',
                 alt: 'amnesia',
                 href: 'https://open.spotify.com/track/3j3G4iwRjdxyPZu78I5ywK?si=42266328794d4ab6',
             },
             {
-                src: '/BOT2.png',
+                src: '/music/BOT2.png',
                 alt: 'dont hide',
                 href: 'https://open.spotify.com/track/5qr7kFKp9mP95Kb1RWX238?si=48a76ecbc9db48b4',
             },
             {
-                src: '/BOT3.png',
+                src: '/music/BOT3.png',
                 alt: 'in the water',
                 href: 'https://open.spotify.com/track/4KH5oVB2BvjrZ9zkHXglar?si=553cc2ab84264de1',
             },
             {
-                src: '/BOT4.png',
+                src: '/music/BOT4.png',
                 alt: 'run it up',
                 href: 'https://open.spotify.com/track/5kkvffjcHB1tHC0EnSZsxg?si=79d7f9e26cbd45d2',
             },
+        ],
+    },
+
+    gfx: {
+        gfxLogoSrc: '/gfx/trusta-gfx-logo.png',
+        gfxLogoAlt: 'trusta gfx logo',
+
+        featuredGfxImageSize: 175,
+        logoImageSize: 200,
+
+        featured: {
+            left: [
+                {src: '/gfx/featured/c_again.png', alt: 'come again'},
+                {src: '/gfx/featured/render3.png', alt: 'judgement day'},
+                {src: '/gfx/featured/givitup.png', alt: 'give it up'},
+            ],
+
+            right: [
+                {src: '/gfx/featured/DUOJAG.png', alt: 'you and i'},
+                {src: '/gfx/featured/LUCID.png', alt: 'lucid dreamers'},
+                {src: '/gfx/featured/habbit.png', alt: 'our secret habit'},
+            ],
+        },
+
+        logos: [
+            {src: '/gfx/logos/LOGO1.png', alt: 'sample logo 1'},
+            {src: '/gfx/logos/LOGO2.png', alt: 'sample logo 2'},
+            {src: '/gfx/logos/LOGO3.png', alt: 'sample logo 3'},
+            {src: '/gfx/logos/LOGO4.png', alt: 'sample logo 4'},
+            {src: '/gfx/logos/LOGO5.png', alt: 'sample logo 5'},
         ],
     },
 
@@ -124,5 +118,31 @@ export default {
                 items: ['Kicks', 'Melodies', 'Intros/breaks (track starters)'],
             },
         ],
+    },
+
+    contact: {
+        discord: {
+            src: '/contact/discord.png',
+            alt: 'discord logo',
+            username: 'trusta',
+        },
+
+        instagram: {
+            src: '/contact/instagram.png',
+            alt: 'instagram logo',
+            href: 'https://www.instagram.com/trusta_music/',
+        },
+
+        gmail: {
+            src: '/contact/gmail.png',
+            alt: 'gmail logo',
+            email: 'trustahs@gmail.com',
+        },
+
+        tcr: {
+            src: '/contact/tcr-logo.png',
+            alt: 'core records logo',
+            href: 'https://www.instagram.com/thecorerecords_/',
+        },
     },
 }
