@@ -1,7 +1,8 @@
 import Image from 'next/image'
 
-import config from '@/common/config'
 import NextLink from '@/components/common/NextLink'
+
+import NavLinks from './NavLinks'
 
 interface PageLayoutProps {
     children?: React.ReactNode
@@ -21,16 +22,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({children}) => (
                     />
                 </NextLink>
 
-                <div className='flex items-strecth gap-20'>
-                    {config.navLinks.map(({href, text}, index) => (
-                        <NextLink
-                            key={index}
-                            href={href}
-                            className='flex items-center hover:underline'>
-                            {text}
-                        </NextLink>
-                    ))}
-                </div>
+                <NavLinks />
             </div>
         </header>
 
