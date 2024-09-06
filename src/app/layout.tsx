@@ -25,7 +25,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({children}) => (
         <body className='min-h-screen flex flex-col bg-[url(/background.png)]'>
             <PageLoadProgress
                 showSpinner={false}
-                color={colors.lime[400]}
+                color={colors.black}
                 height={6}
             />
 

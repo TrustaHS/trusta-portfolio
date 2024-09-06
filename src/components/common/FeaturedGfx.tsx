@@ -1,35 +1,42 @@
 import Image from 'next/image'
 
 import config from '@/common/config'
+import {cn} from '@/lib/shadcn'
 
-const IMAGE_SIZE = 200
+interface FeaturedGfxProps {
+    className?: string
+}
 
-const FeaturedGfx: React.FC = () => (
-    <div className='flex flex-row justify-center items-center gap-10 flex-1'>
-        {config.featuredGfx.left.map(({src, alt}, index) => (
+const FeaturedGfx: React.FC<FeaturedGfxProps> = ({className}) => (
+    <div
+        className={cn(
+            'flex flex-row justify-center items-center gap-10 w-full',
+            className,
+        )}>
+        {config.gfx.featured.left.map(({src, alt}, index) => (
             <Image
                 key={index}
-                src={src}
+                src={`${config.imageUrls.gfx.featured}${src}`}
                 alt={alt}
-                width={IMAGE_SIZE}
-                height={IMAGE_SIZE}
+                width={config.gfx.featuredGfxImageSize}
+                height={config.gfx.featuredGfxImageSize}
             />
         ))}
 
         <Image
             src='/gfx/trusta-gfx-logo.png'
             alt='trusta gfx logo'
-            width={IMAGE_SIZE}
+            width={config.gfx.featuredGfxImageSize}
             height={0}
         />
 
-        {config.featuredGfx.right.map(({src, alt}, index) => (
+        {config.gfx.featured.right.map(({src, alt}, index) => (
             <Image
                 key={index}
-                src={src}
+                src={`${config.imageUrls.gfx.featured}${src}`}
                 alt={alt}
-                width={IMAGE_SIZE}
-                height={IMAGE_SIZE}
+                width={config.gfx.featuredGfxImageSize}
+                height={config.gfx.featuredGfxImageSize}
             />
         ))}
     </div>

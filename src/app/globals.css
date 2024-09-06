@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 :root {
-    --font-sans: 'loos-normal';
-    --font-light: 'loos-light';
+    --font-sans: 'loos-wide';
+}
+
+* {
+    @apply outline-black;
 }
