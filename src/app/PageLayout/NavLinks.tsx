@@ -4,8 +4,7 @@ import {HomeAlt, Menu} from 'iconoir-react'
 import {usePathname} from 'next/navigation'
 import {useState} from 'react'
 
-import config from '@/common/config'
-import NextLink from '@/components/common/NextLink'
+import NextLink from '@/components/NextLink'
 import {Button} from '@/components/ui/Button'
 import {
     Drawer,
@@ -14,6 +13,7 @@ import {
     DrawerTitle,
     DrawerTrigger,
 } from '@/components/ui/Drawer'
+import config from '@/utils/config'
 
 interface MobileNavLinkItemProps {
     href: string

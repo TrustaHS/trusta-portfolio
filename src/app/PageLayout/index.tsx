@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import NextLink from '@/components/common/NextLink'
+import NextLink from '@/components/NextLink'
 
 import NavLinks from './NavLinks'
 

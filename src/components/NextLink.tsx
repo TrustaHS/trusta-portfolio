@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import {forwardRef} from 'react'
 
-import {cn} from '@/lib/shadcn'
+import {cn} from '@/utils/cn'
 
 interface NextLinkProps extends React.ComponentProps<typeof Link> {
     children?: React.ReactNode

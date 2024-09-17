@@ -1,9 +1,9 @@
 import Image from 'next/image'
 
-import config from '@/common/config'
-import FeaturedGfx from '@/components/common/FeaturedGfx'
-import NextLink from '@/components/common/NextLink'
-import {cn} from '@/lib/shadcn'
+import FeaturedGfx from '@/components/FeaturedGfx'
+import NextLink from '@/components/NextLink'
+import {cn} from '@/utils/cn'
+import config from '@/utils/config'
 
 interface HoverTextProps {
     className?: string

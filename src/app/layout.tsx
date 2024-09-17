@@ -4,6 +4,8 @@ import Image from 'next/image'
 import PageLoadProgress from 'nextjs-toploader'
 import colors from 'tailwindcss/colors'
 
+import {Toaster} from '@/components/ui/Toaster'
+
 import PageLayout from './PageLayout'
 import './globals.css'
 
@@ -42,6 +44,8 @@ const RootLayout: React.FC<RootLayoutProps> = ({children}) => (
                     width: '1.5rem',
                     height: '1.5rem',
                 }}>
+                <Toaster />
+
                 <PageLayout>{children}</PageLayout>
             </IconoirProvider>
         </body>

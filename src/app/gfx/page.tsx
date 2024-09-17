@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-import config from '@/common/config'
-import FeaturedGfx from '@/components/common/FeaturedGfx'
-import NextLink from '@/components/common/NextLink'
+import FeaturedGfx from '@/components/FeaturedGfx'
+import NextLink from '@/components/NextLink'
+import config from '@/utils/config'
 
 const GfxPage: React.FC = () => (
     <div className='flex flex-col justify-center items-center gap-[100px] flex-1 max-lg:my-10'>

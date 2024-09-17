@@ -1,7 +1,10 @@
 import Image from 'next/image'
 
-import config from '@/common/config'
-import NextLink from '@/components/common/NextLink'
+import NextLink from '@/components/NextLink'
+import {Button} from '@/components/ui/Button'
+import config from '@/utils/config'
+
+import DiscordContact from './DiscordContact'
 
 const ContactPage: React.FC = () => (
     <>
@@ -22,20 +25,11 @@ const ContactPage: React.FC = () => (
             </div>
 
             <div className='flex justify-between items-center max-lg:gap-5 max-w-screen-md w-full'>
-                <div className='relative flex flex-col items-center gap-4 max-w-max'>
-                    <Image
-                        src={config.contact.discord.src}
-                        alt={config.contact.discord.alt}
-                        width={config.contact.discord.size}
-                        height={0}
-                    />
+                <DiscordContact />
 
-                    <p className='max-lg:hidden absolute -bottom-2 translate-y-full w-max text-lg'>
-                        (fastest response)
-                    </p>
-                </div>
-
-                <div className='flex flex-col items-center gap-4'>
+                <Button
+                    className='flex flex-col items-center gap-4 bg-[unset] hover:bg-[unset] p-0'
+                    asChild>
                     <a
                         href={config.contact.instagram.href}
                         target='_blank'
@@ -47,9 +41,11 @@ const ContactPage: React.FC = () => (
                             height={0}
                         />
                     </a>
-                </div>
+                </Button>
 
-                <div className='flex flex-col items-center gap-4'>
+                <Button
+                    className='flex flex-col items-center gap-4 bg-[unset] hover:bg-[unset] p-0'
+                    asChild>
                     <a href={`mailto:${config.contact.gmail.email}`}>
                         <Image
                             src={config.contact.gmail.src}
@@ -58,7 +54,7 @@ const ContactPage: React.FC = () => (
                             height={0}
                         />
                     </a>
-                </div>
+                </Button>
             </div>
 
             <div className='flex flex-col items-center gap-4'>

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
-import config from '@/common/config'
-import {cn} from '@/lib/shadcn'
+import {cn} from '@/utils/cn'
+import config from '@/utils/config'
 
 interface FeaturedGfxProps {
     className?: string

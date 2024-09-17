@@ -3,7 +3,7 @@
 import {forwardRef} from 'react'
 import {Drawer as DrawerPrimitive} from 'vaul'
 
-import {cn} from '@/lib/shadcn'
+import {cn} from '@/utils/cn'
 
 export const Drawer = ({
     shouldScaleBackground = false,

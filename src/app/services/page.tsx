@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-import config from '@/common/config'
-import NextLink from '@/components/common/NextLink'
+import NextLink from '@/components/NextLink'
 import {Button} from '@/components/ui/Button'
+import config from '@/utils/config'
 
 interface TagProps {
     children?: React.ReactNode
