@@ -10,9 +10,9 @@ interface PageLayoutProps {
 
 const PageLayout: React.FC<PageLayoutProps> = ({children}) => (
     <>
-        <header className='sticky z-10 top-0 inset-x-0 backdrop-blur-sm bg-white/80'>
+        <header className='sticky z-50 top-0 inset-x-0 backdrop-blur-sm bg-white/85'>
             <div className='flex justify-between items-stretch container py-4'>
-                <NextLink href='/'>
+                <NextLink href='/' className='w-[140px] md:w-[180px]'>
                     <Image
                         priority
                         src='/logo.png'

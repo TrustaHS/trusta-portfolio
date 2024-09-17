@@ -25,13 +25,37 @@ disabled:pointer-events-none disabled:opacity-50
             variant: {
                 default:
                     'bg-white hover:bg-white/80 backdrop-blur-lg text-black w-max',
+                icon: 'bg-white',
             },
 
             size: {
-                default: 'px-4 py-[2px]',
-                lg: 'px-4 py-2 text-3xl tracking-wide',
+                default: '',
+                lg: 'text-3xl tracking-wide',
             },
         },
+
+        compoundVariants: [
+            {
+                variant: ['default'],
+                size: ['default'],
+                class: 'px-4 py-[2px]',
+            },
+            {
+                variant: ['default'],
+                size: ['lg'],
+                class: 'px-4 py-2',
+            },
+            {
+                variant: ['icon'],
+                size: ['default'],
+                class: 'h-6 w-6',
+            },
+            {
+                variant: ['icon'],
+                size: ['lg'],
+                class: 'h-7 w-7',
+            },
+        ],
 
         defaultVariants: {
             variant: 'default',

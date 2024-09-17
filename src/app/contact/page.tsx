@@ -5,11 +5,11 @@ import NextLink from '@/components/common/NextLink'
 
 const ContactPage: React.FC = () => (
     <>
-        <div className='absolute inset-0 flex flex-col justify-center items-center gap-10 container max-w-screen-lg mt-10 text-center'>
+        <div className='flex flex-col justify-center items-center gap-10 flex-1 container max-w-screen-lg max-lg:my-10 text-center'>
             <div className='flex flex-col items-center gap-4'>
-                <h2 className='text-6xl'>Contact Details</h2>
+                <h2 className='text-2xl md:text-4xl'>Contact Details</h2>
 
-                <p className='text-3xl'>
+                <p className='text-md md:text-xl'>
                     Please reach out if you have any questions about my{' '}
                     <NextLink
                         href='/services'
@@ -21,16 +21,16 @@ const ContactPage: React.FC = () => (
                 </p>
             </div>
 
-            <div className='flex justify-between max-w-screen-md w-full'>
-                <div className='relative flex flex-col items-center gap-4'>
+            <div className='flex justify-between items-center max-lg:gap-5 max-w-screen-md w-full'>
+                <div className='relative flex flex-col items-center gap-4 max-w-max'>
                     <Image
                         src={config.contact.discord.src}
                         alt={config.contact.discord.alt}
-                        width={80}
+                        width={config.contact.discord.size}
                         height={0}
                     />
 
-                    <p className='absolute -bottom-2 translate-y-[100%] w-max text-xl'>
+                    <p className='max-lg:hidden absolute -bottom-2 translate-y-full w-max text-lg'>
                         (fastest response)
                     </p>
                 </div>
@@ -43,7 +43,7 @@ const ContactPage: React.FC = () => (
                         <Image
                             src={config.contact.instagram.src}
                             alt={config.contact.instagram.alt}
-                            width={80}
+                            width={config.contact.instagram.size}
                             height={0}
                         />
                     </a>
@@ -54,7 +54,7 @@ const ContactPage: React.FC = () => (
                         <Image
                             src={config.contact.gmail.src}
                             alt={config.contact.gmail.alt}
-                            width={80}
+                            width={config.contact.gmail.size}
                             height={0}
                         />
                     </a>
@@ -62,28 +62,16 @@ const ContactPage: React.FC = () => (
             </div>
 
             <div className='flex flex-col items-center gap-4'>
-                <h2 className='text-6xl'>About me</h2>
+                <h2 className='text-2xl md:text-4xl'>
+                    {config.contact.aboutMe.title}
+                </h2>
 
                 <div className='space-y-6'>
-                    <p className='text-xl'>
-                        Hi, my name is Daniel! I'm a 24 year-old guy from
-                        Sweden.
-                    </p>
-
-                    <p className='text-xl'>
-                        I have been producing Hardstyle/Rawstyle/Hardcore since
-                        2018. In 2024, I graduated from "Teknikhögskolan
-                        Gothenburg" with a degree in audio engineering. Having
-                        learned from the Swedish masters combined with my own
-                        journey of self teaching, I have become confident in my
-                        skills as both a producer and an engineer.
-                    </p>
-
-                    <p className='text-xl'>
-                        Apart from that I also do graphic design. I produce all
-                        of my own artworks and I am also a dedicated designer
-                        and co-owner of "The Core Records" label.
-                    </p>
+                    {config.contact.aboutMe.description.map((text, index) => (
+                        <p key={index} className='text-md md:text-lg'>
+                            {text}
+                        </p>
+                    ))}
                 </div>
             </div>
 
@@ -94,7 +82,7 @@ const ContactPage: React.FC = () => (
                 <Image
                     src={config.contact.tcr.src}
                     alt={config.contact.tcr.alt}
-                    width={200}
+                    width={config.contact.tcr.size}
                     height={0}
                 />
             </a>

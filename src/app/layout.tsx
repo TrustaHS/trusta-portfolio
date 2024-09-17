@@ -1,4 +1,6 @@
+import {IconoirProvider} from 'iconoir-react'
 import type {Metadata} from 'next'
+import Image from 'next/image'
 import PageLoadProgress from 'nextjs-toploader'
 import colors from 'tailwindcss/colors'
 
@@ -22,14 +24,26 @@ const RootLayout: React.FC<RootLayoutProps> = ({children}) => (
             <link rel='stylesheet' href='https://use.typekit.net/qoj7cts.css' />
         </head>
 
-        <body className='min-h-screen flex flex-col bg-[url(/background.png)]'>
+        <body className='min-h-screen flex flex-col'>
             <PageLoadProgress
                 showSpinner={false}
                 color={colors.black}
                 height={6}
             />
 
-            <PageLayout>{children}</PageLayout>
+            <div className='fixed inset-0 -z-10'>
+                <Image priority src='/background.png' alt='background' fill />
+            </div>
+
+            <IconoirProvider
+                iconProps={{
+                    color: '#000000',
+                    strokeWidth: 2,
+                    width: '1.5rem',
+                    height: '1.5rem',
+                }}>
+                <PageLayout>{children}</PageLayout>
+            </IconoirProvider>
         </body>
     </html>
 )

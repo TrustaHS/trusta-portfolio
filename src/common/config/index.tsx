@@ -1,9 +1,11 @@
+import {AlbumList, MediaImage, SendMail, ShopFourTiles} from 'iconoir-react'
+
 export default {
     navLinks: [
-        {href: '/music', text: 'MUSIC'},
-        {href: '/gfx', text: 'GFX'},
-        {href: '/services', text: 'SERVICES'},
-        {href: '/contact', text: 'CONTACT'},
+        {href: '/music', text: 'MUSIC', icon: <AlbumList />},
+        {href: '/gfx', text: 'GFX', icon: <MediaImage />},
+        {href: '/services', text: 'SERVICES', icon: <ShopFourTiles />},
+        {href: '/contact', text: 'CONTACT', icon: <SendMail />},
     ],
 
     home: {
@@ -27,9 +29,6 @@ export default {
     },
 
     music: {
-        latestImageSize: 350,
-        featuredImageSize: 250,
-
         latest: {
             src: '/music/TOP WIDE.png',
             alt: 'horror of the deep',
@@ -43,21 +42,29 @@ export default {
                 src: '/music/BOT1.png',
                 alt: 'amnesia',
                 href: 'https://open.spotify.com/track/3j3G4iwRjdxyPZu78I5ywK?si=42266328794d4ab6',
+                artist: 'TRUSTA',
+                title: 'AMNESIA',
             },
             {
                 src: '/music/BOT2.png',
                 alt: 'dont hide',
                 href: 'https://open.spotify.com/track/5qr7kFKp9mP95Kb1RWX238?si=48a76ecbc9db48b4',
+                artist: 'TRUSTA x FYLOH',
+                title: "DON'T HIDE",
             },
             {
                 src: '/music/BOT3.png',
                 alt: 'in the water',
                 href: 'https://open.spotify.com/track/4KH5oVB2BvjrZ9zkHXglar?si=553cc2ab84264de1',
+                artist: 'TRUSTA x SINVERZE',
+                title: 'IN THE WATER',
             },
             {
                 src: '/music/BOT4.png',
                 alt: 'run it up',
                 href: 'https://open.spotify.com/track/5kkvffjcHB1tHC0EnSZsxg?si=79d7f9e26cbd45d2',
+                artist: 'TRUSTA',
+                title: 'RUN IT UP',
             },
         ],
     },
@@ -101,8 +108,12 @@ export default {
         tags: ['Hardstyle', 'Rawstyle', 'Hardcore'],
 
         description: [
-            "Hi, my name is Daniel! I'm a 24 year old guy from Sweden.",
-            'I have been producing Hardstyle/Rawstyle/Hardcore since 2018. In 2024 I graduated from ”Teknikhögskolan Gothenburg” with a degree in audio engineering. Having learned from the swedish masters combined with my own journey of self teaching, I have become confident in my skills as both a producer and an engineer.',
+            `
+Hi, my name is Daniel! I'm a 24 year old guy from Sweden.
+            `,
+            `
+I have been producing Hardstyle/Rawstyle/Hardcore since 2018. In 2024 I graduated from ”Teknikhögskolan Gothenburg” with a degree in audio engineering. Having learned from the swedish masters combined with my own journey of self teaching, I have become confident in my skills as both a producer and an engineer.
+            `,
         ],
 
         sections: [
@@ -125,24 +136,50 @@ export default {
             src: '/contact/discord.png',
             alt: 'discord logo',
             username: 'trusta',
+            size: 70,
         },
 
         instagram: {
             src: '/contact/instagram.png',
             alt: 'instagram logo',
             href: 'https://www.instagram.com/trusta_music/',
+            size: 70,
         },
 
         gmail: {
             src: '/contact/gmail.png',
             alt: 'gmail logo',
             email: 'trustahs@gmail.com',
+            size: 70,
         },
 
         tcr: {
             src: '/contact/tcr-logo.png',
             alt: 'core records logo',
             href: 'https://www.instagram.com/thecorerecords_/',
+            size: 150,
+        },
+
+        aboutMe: {
+            title: 'About me',
+            description: [
+                `
+Hi, my name is Daniel! I'm a 24 year-old guy from Sweden.
+                `,
+                `
+I have been producing Hardstyle/Rawstyle/Hardcore since
+2018. In 2024, I graduated from "Teknikhögskolan
+Gothenburg" with a degree in audio engineering. Having
+learned from the Swedish masters combined with my own
+journey of self teaching, I have become confident in my
+skills as both a producer and an engineer.
+                `,
+                `
+Apart from that I also do graphic design. I produce all
+of my own artworks and I am also a dedicated designer
+and co-owner of "The Core Records" label.
+                `,
+            ],
         },
     },
 }

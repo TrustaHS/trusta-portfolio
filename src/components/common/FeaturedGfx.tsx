@@ -10,37 +10,45 @@ interface FeaturedGfxProps {
 const FeaturedGfx: React.FC<FeaturedGfxProps> = ({className}) => (
     <div
         className={cn(
-            'flex flex-row justify-center items-center gap-10 w-full',
+            'flex max-lg:flex-col justify-center items-center gap-5 xl:gap-10 w-full md:px-5 xl:px-10',
             className,
         )}>
-        {config.gfx.featured.left.map(({src, alt}, index) => (
-            <Image
-                key={index}
-                src={src}
-                alt={alt}
-                width={config.gfx.featuredGfxImageSize}
-                height={config.gfx.featuredGfxImageSize}
-                className='rounded-md'
-            />
-        ))}
+        <div className='flex justify-end items-end gap-5 xl:gap-10 flex-1'>
+            {config.gfx.featured.left.map(({src, alt}, index) => (
+                <div key={index} className='max-w-[110px] md:max-w-max'>
+                    <Image
+                        src={src}
+                        alt={alt}
+                        width={config.gfx.featuredGfxImageSize}
+                        height={config.gfx.featuredGfxImageSize}
+                        className='rounded-md'
+                    />
+                </div>
+            ))}
+        </div>
 
-        <Image
-            src={config.gfx.gfxLogoSrc}
-            alt={config.gfx.gfxLogoAlt}
-            width={config.gfx.featuredGfxImageSize}
-            height={0}
-        />
-
-        {config.gfx.featured.right.map(({src, alt}, index) => (
+        <div className='flex justify-center items-center max-w-[130px] md:max-w-max flex-shrink-0'>
             <Image
-                key={index}
-                src={src}
-                alt={alt}
+                src={config.gfx.gfxLogoSrc}
+                alt={config.gfx.gfxLogoAlt}
                 width={config.gfx.featuredGfxImageSize}
-                height={config.gfx.featuredGfxImageSize}
-                className='rounded-md'
+                height={0}
             />
-        ))}
+        </div>
+
+        <div className='flex gap-5 xl:gap-10 flex-1'>
+            {config.gfx.featured.right.map(({src, alt}, index) => (
+                <div key={index} className='max-w-[110px] md:max-w-max'>
+                    <Image
+                        src={src}
+                        alt={alt}
+                        width={config.gfx.featuredGfxImageSize}
+                        height={config.gfx.featuredGfxImageSize}
+                        className='rounded-md'
+                    />
+                </div>
+            ))}
+        </div>
     </div>
 )
 

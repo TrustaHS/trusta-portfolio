@@ -22,7 +22,7 @@ const HoverText: React.FC<HoverTextProps> = ({
 }) => {
     const content = (
         <>
-            <div className='absolute inset-0 flex transition-all duration-700 group-hover:scale-[1.05] group-hover:translate-x-5'>
+            <div className='absolute inset-0 flex transition-all duration-700 group-hover:scale-[1.55] md:group-hover:scale-[1.05] group-hover:translate-x-5 max-md:scale-[1.5]'>
                 {children}
             </div>
 
@@ -80,7 +80,8 @@ const HomePage: React.FC = () => (
         <HoverText
             external={config.home.socials.external}
             href={config.home.socials.href}
-            text={config.home.socials.text}>
+            text={config.home.socials.text}
+            className='max-lg:flex-[0.5]'>
             <Image
                 src={config.home.socials.src}
                 alt={config.home.socials.alt}
@@ -92,7 +93,8 @@ const HomePage: React.FC = () => (
         <HoverText
             external={config.home.music.external}
             href={config.home.music.href}
-            text={config.home.music.text}>
+            text={config.home.music.text}
+            className='max-lg:flex-[0.5]'>
             <Image
                 src={config.home.music.src}
                 alt={config.home.music.alt}
