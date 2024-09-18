@@ -4,6 +4,7 @@ import Image from 'next/image'
 import PageLoadProgress from 'nextjs-toploader'
 import colors from 'tailwindcss/colors'
 
+import MotionProvider from '@/components/providers/MotionProvider'
 import {Toaster} from '@/components/ui/Toaster'
 
 import Favicon from './Favicon'
@@ -55,17 +56,19 @@ const RootLayout: React.FC<RootLayoutProps> = ({children}) => (
                 <Image priority src='/background.png' alt='background' fill />
             </div>
 
-            <IconoirProvider
-                iconProps={{
-                    color: '#000000',
-                    strokeWidth: 2,
-                    width: '1.5rem',
-                    height: '1.5rem',
-                }}>
-                <Toaster />
+            <MotionProvider>
+                <IconoirProvider
+                    iconProps={{
+                        color: '#000000',
+                        strokeWidth: 2,
+                        width: '1.5rem',
+                        height: '1.5rem',
+                    }}>
+                    <Toaster />
 
-                <PageLayout>{children}</PageLayout>
-            </IconoirProvider>
+                    <PageLayout>{children}</PageLayout>
+                </IconoirProvider>
+            </MotionProvider>
         </body>
     </html>
 )

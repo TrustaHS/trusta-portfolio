@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 import NextLink from '@/components/NextLink'
 
+import DevCredits from './DevCredits'
 import NavLinks from './NavLinks'
 
 interface PageLayoutProps {
@@ -27,6 +28,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({children}) => (
         </header>
 
         <main className='relative flex flex-col flex-1 z-10'>{children}</main>
+        <DevCredits />
     </>
 )
 
