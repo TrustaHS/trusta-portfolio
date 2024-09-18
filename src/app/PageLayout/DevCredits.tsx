@@ -9,7 +9,7 @@ import {cn} from '@/utils/cn'
 interface DevCreditsProps {}
 
 const DevCredits: React.FC<DevCreditsProps> = ({}) => {
-    const [hover, setHover] = useState(true)
+    const [hover, setHover] = useState(false)
 
     const [size, setSize] = useState<CSSProperties>({
         width: 'auto',
@@ -39,14 +39,14 @@ fixed z-10 bottom-2 right-2 p-1
 bg-black text-white overflow-clip text-nowrap cursor-pointer
 transition-all
 `,
-                    hover ? 'px-3 gap-2' : '',
+                    hover ? 'p-2 pr-3 gap-2' : '',
                 )}
                 onHoverStart={() => setHover(true)}
                 onHoverEnd={() => setHover(false)}
                 style={{
                     display: 'flex',
                     justifyContent: 'center',
-                    alignItems: 'center',
+                    alignItems: 'start',
                     borderRadius: 6,
                     borderWidth: 1,
                     borderColor: 'white',
@@ -55,20 +55,22 @@ transition-all
                     width: size.width,
                     height: size.height,
                 }}>
-                <Code className='text-inherit h-6 w-6 transition-all' />
+                <Code className='text-inherit h-6 w-6' />
 
                 <AnimatePresence>
                     {hover && (
-                        <m.p
-                            className='translate-y-px'
-                            initial={{width: 0, opacity: 0}}
+                        <m.div
+                            className='flex flex-col'
+                            initial={{width: 0, height: 0, opacity: 0}}
                             animate={{
                                 width: 'auto',
+                                height: 'auto',
                                 opacity: 1,
                             }}
-                            exit={{width: 0, opacity: 0}}>
-                            ElohmroW
-                        </m.p>
+                            exit={{width: 0, height: 0, opacity: 0}}>
+                            <p>made by:</p>
+                            <p className='hover:underline'>elohmrow.dev</p>
+                        </m.div>
                     )}
                 </AnimatePresence>
             </m.a>
