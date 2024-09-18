@@ -1,8 +1,13 @@
+import {Metadata} from 'next'
 import Image from 'next/image'
 
 import FeaturedGfx from '@/components/FeaturedGfx'
 import NextLink from '@/components/NextLink'
 import config from '@/utils/config'
+
+export const metadata: Metadata = {
+    title: 'GFX',
+}
 
 const GfxPage: React.FC = () => (
     <div className='flex flex-col justify-center items-center gap-[100px] flex-1 max-lg:my-10'>

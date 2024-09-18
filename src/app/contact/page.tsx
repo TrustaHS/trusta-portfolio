@@ -1,3 +1,4 @@
+import {Metadata} from 'next'
 import Image from 'next/image'
 
 import NextLink from '@/components/NextLink'
@@ -5,6 +6,10 @@ import {Button} from '@/components/ui/Button'
 import config from '@/utils/config'
 
 import DiscordContact from './DiscordContact'
+
+export const metadata: Metadata = {
+    title: 'Contact',
+}
 
 const ContactPage: React.FC = () => (
     <>

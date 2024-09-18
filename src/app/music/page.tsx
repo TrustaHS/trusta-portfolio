@@ -1,3 +1,4 @@
+import {Metadata} from 'next'
 import Image from 'next/image'
 
 import {Button} from '@/components/ui/Button'
@@ -93,6 +94,10 @@ transition-all duration-300
             </div>
         </a>
     )
+}
+
+export const metadata: Metadata = {
+    title: 'Music',
 }
 
 const MusicPage: React.FC = () => (

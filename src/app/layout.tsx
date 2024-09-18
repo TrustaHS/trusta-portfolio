@@ -6,6 +6,7 @@ import colors from 'tailwindcss/colors'
 
 import {Toaster} from '@/components/ui/Toaster'
 
+import Favicon from './Favicon'
 import PageLayout from './PageLayout'
 import './globals.css'
 
@@ -16,14 +17,31 @@ interface RootLayoutProps {
 export const metadata: Metadata = {
     metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_APP_URL),
 
-    title: 'TRUSTA',
-    description: '',
+    title: {
+        template: 'TRUSTA | %s',
+        default: 'TRUSTA',
+    },
+
+    description:
+        'The official website of TRUSTA: hardstyle producer, audio engineer, graphical designer and former youtuber',
+
+    openGraph: {
+        title: 'TRUSTA',
+        description:
+            'The official website of TRUSTA: hardstyle producer, audio engineer, graphical designer and former youtuber',
+        type: 'website',
+        images: '/trusta-icon.png',
+    },
+
+    keywords: ['hardstyle', 'rawstyle', 'mixing', 'mastering', 'gfx'],
 }
 
 const RootLayout: React.FC<RootLayoutProps> = ({children}) => (
     <html lang='en'>
         <head>
             <link rel='stylesheet' href='https://use.typekit.net/qoj7cts.css' />
+
+            <Favicon path='/favicon' />
         </head>
 
         <body className='min-h-screen flex flex-col'>

@@ -1,3 +1,4 @@
+import {Metadata} from 'next'
 import Image from 'next/image'
 
 import NextLink from '@/components/NextLink'
@@ -13,6 +14,10 @@ const Tag: React.FC<TagProps> = ({children}) => (
         {children}
     </p>
 )
+
+export const metadata: Metadata = {
+    title: 'Services',
+}
 
 const ServicesPage: React.FC = () => (
     <div className='flex justify-center items-center flex-1 max-lg:my-6'>
