@@ -19,7 +19,7 @@ export default {
 
         music: {
             text: 'MUSIC',
-            src: '/featured-release.png',
+            src: '/featured-release.webp',
             alt: 'featured release',
             href: '/music',
             external: false,
