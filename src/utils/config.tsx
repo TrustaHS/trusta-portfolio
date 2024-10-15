@@ -30,37 +30,37 @@ export default {
 
     music: {
         latest: {
-            src: '/music/TOP WIDE.png',
+            src: '/music/TOP WIDE.webp',
             alt: 'horror of the deep',
-            href: 'https://open.spotify.com/album/4z3LZf32sBSP6wSqIZEk8K?si=LWhEnaBUSBGrBzXfaKWiNA',
+            href: 'https://open.spotify.com/track/6ESjvRbyHO5kXos5beQ7VX?si=62a8f94428c14ceb',
             artist: 'TRUSTA',
-            title: 'HORRORS OF THE DEEP',
+            title: 'LUCID DREAMERS',
         },
 
         featured: [
             {
-                src: '/music/BOT1.png',
+                src: '/music/BOT1.webp',
                 alt: 'amnesia',
-                href: 'https://open.spotify.com/track/3j3G4iwRjdxyPZu78I5ywK?si=42266328794d4ab6',
+                href: 'https://open.spotify.com/album/4z3LZf32sBSP6wSqIZEk8K?si=NfTjB6YJTi-fVy_xuFA1zw',
                 artist: 'TRUSTA',
-                title: 'AMNESIA',
+                title: 'HORRORS OF THE DEEP',
             },
             {
-                src: '/music/BOT2.png',
+                src: '/music/BOT2.webp',
                 alt: 'dont hide',
-                href: 'https://open.spotify.com/track/5qr7kFKp9mP95Kb1RWX238?si=48a76ecbc9db48b4',
-                artist: 'TRUSTA x FYLOH',
-                title: "DON'T HIDE",
+                href: 'https://open.spotify.com/track/4txvjrPDjqNasU4w3xbsA6?si=7ec45da423da45df',
+                artist: 'TRUSTA',
+                title: "AMNESIA",
             },
             {
-                src: '/music/BOT3.png',
+                src: '/music/BOT3.webp',
                 alt: 'in the water',
-                href: 'https://open.spotify.com/track/4KH5oVB2BvjrZ9zkHXglar?si=553cc2ab84264de1',
-                artist: 'TRUSTA x SINVERZE',
-                title: 'IN THE WATER',
+                href: 'https://open.spotify.com/track/5qr7kFKp9mP95Kb1RWX238?si=ec5edd65ac3c48cb',
+                artist: 'TRUSTA x FYLOH',
+                title: 'DONT HIDE',
             },
             {
-                src: '/music/BOT4.png',
+                src: '/music/BOT4.webp',
                 alt: 'run it up',
                 href: 'https://open.spotify.com/track/5kkvffjcHB1tHC0EnSZsxg?si=79d7f9e26cbd45d2',
                 artist: 'TRUSTA',
