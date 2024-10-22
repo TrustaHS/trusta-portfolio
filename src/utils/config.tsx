@@ -11,8 +11,8 @@ export default {
     home: {
         socials: {
             text: 'SOCIALS',
-            src: '/hero.png',
-            alt: 'hero',
+            src: '/social-slot.webp',
+            alt: 'socials',
             href: 'https://linktr.ee/trustahardstyle',
             external: true,
         },
