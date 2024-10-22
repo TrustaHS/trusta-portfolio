@@ -12,14 +12,14 @@ export default {
         socials: {
             text: 'SOCIALS',
             src: '/social-slot.webp',
-            alt: 'socials',
+            alt: 'social slot',
             href: 'https://linktr.ee/trustahardstyle',
             external: true,
         },
 
         music: {
             text: 'MUSIC',
-            src: '/featured-release.webp',
+            src: '/music/featured-release.webp',
             alt: 'featured release',
             href: '/music',
             external: false,
